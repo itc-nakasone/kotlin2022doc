@@ -2,7 +2,8 @@ CREATE TABLE users (
     id BIGINT PRIMARY KEY AUTO_INCREMENT,
     username VARCHAR(256) NOT NULL UNIQUE ,
     password VARCHAR(256) NOT NULL,
-    view_name VARCHAR(256) NOT NULL
+    view_name VARCHAR(256) NOT NULL,
+    role_type ENUM('ADMIN','USER') NOT NULL
 );
 
 CREATE TABLE category (
