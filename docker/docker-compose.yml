@@ -13,6 +13,8 @@ services:
       MARIADB_PASSWORD: 'foobarhogepiyo'
     volumes:
       - ./db/data:/var/lib/mysql
+      - ./sql:/docker-entrypoint-initdb.d
+      - ./db/conf:/etc/mysql/conf.d
 
   redis:
     container_name: 'redis_session'
