@@ -5,7 +5,6 @@ services:
     image: mariadb:10.8.3
     ports:
       - '3306:3306'
-    restart: always
     environment:
       MARIADB_ROOT_PASSWORD: 'maria'
       MARIADB_DATABASE: 'news_release'
